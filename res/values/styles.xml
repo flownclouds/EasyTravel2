@@ -1,0 +1,44 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    
+    <!--  给popupwindow添加样式 -->
+    <style name="popwin_anim_style">
+        <item name="android:windowEnterAnimation">@anim/popwin_show</item>
+        <item name="android:windowExitAnimation">@anim/popwin_hide</item>
+    </style>
+    
+    <style name="popwin_select_anim_style">
+        <item name="android:windowEnterAnimation">@anim/popwin_select_show</item>
+        <item name="android:windowExitAnimation">@anim/popwin_select_hide</item>
+    </style>
+    
+    <style name="popwin_bigpic_anim_style">
+        <item name="android:windowEnterAnimation">@anim/left_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/left_bottom_out</item>
+    </style>
+    
+    <!--  添加联系人页面button样式 -->
+    <style name="edit_btn_style">
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:background">@drawable/btn_edit_style</item>
+    </style>
+
+</resources>

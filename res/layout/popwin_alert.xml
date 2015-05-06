@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="50dp"
+    android:layout_marginRight="50dp" >
+    
+    <TextView
+        android:id="@+id/tv_alert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:padding="20dp"
+        android:text="Text should not be null, do you want to give up this note?" />
+    
+    <View
+        android:layout_width="match_parent" 
+	    android:layout_height="1dp"
+	    android:layout_below="@+id/tv_alert"
+	    android:scaleY="0.8"
+	    android:background="#9C9C9C"
+	    android:layout_gravity="center_horizontal" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_alert"
+        android:orientation="horizontal" >
+         
+        <Button
+            android:id="@+id/btn_alertNo"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:textSize="17dp"
+	        style="@style/edit_btn_style"
+	        android:text="No" />
+        
+        <View
+            android:layout_width="1dip" 
+		    android:layout_height="fill_parent"
+		    android:background="#9C9C9C"
+		    android:layout_gravity="center_horizontal" />
+    
+	    <Button
+	        android:id="@+id/btn_alertYes"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:textSize="17dp"
+	        style="@style/edit_btn_style"
+	        android:text="Yes" />
+        
+    </LinearLayout>
+    
+    
+
+</RelativeLayout>

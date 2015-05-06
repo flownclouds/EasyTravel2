@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_editNote"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".EditNoteActivity" >
+
+    <LinearLayout
+        android:id="@+id/ll_edit"
+        android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true" >
+	    
+        <EditText
+            android:id="@+id/et_editTitle"
+            android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="3.0"
+	        android:ems="10"
+	        android:hint="title" />
+        
+        <Spinner
+            android:id="@+id/spinner_editPermission"
+            android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="3dp"
+	        android:layout_weight="1.2" />
+        
+        <ImageButton
+            android:id="@+id/ibtn_editWeather"
+            android:layout_width="0dp"
+	        android:layout_height="48dp"
+	        android:layout_marginLeft="3dp"
+	        android:layout_weight="0.8"
+	        android:background="@drawable/btn_edit_style"
+	        android:src="@drawable/ic_sun" />
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/ll_editContent"
+        android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@+id/ll_edit"
+		android:layout_above="@+id/ll_editOperation"
+		android:layout_marginTop="15dp"
+		android:layout_marginBottom="8dp"
+		android:orientation="vertical" >
+        
+        <EditText
+            android:id="@+id/et_editContent"
+            android:layout_width="match_parent"
+		    android:layout_height="0dp"
+		    android:layout_weight="1"
+		    android:background="@drawable/tv_content_border"
+		    android:ems="10"
+		    android:gravity="top"
+		    android:hint="say something~"
+		    android:inputType="textMultiLine" />
+        
+        <LinearLayout
+            android:id="@+id/ll_editNewImage"
+            android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:layout_marginTop="10dp" >
+            
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/ll_editNewOther"
+            android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:layout_marginTop="10dp" >
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+    <android.view.ext.SatelliteMenu
+        android:id="@+id/sat_menu_edit"
+        android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	    android:layout_above="@+id/ll_editOperation"
+	    android:layout_marginBottom="15dp" />
+    
+    <View
+        android:layout_height="1dip" 
+        android:layout_width="match_parent"
+        android:layout_above="@+id/ll_editOperation"
+        android:background="#9C9C9C" />
+    
+    <LinearLayout
+        android:id="@+id/ll_editOperation"
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:orientation="horizontal" >
+        
+        <Button
+            android:id="@+id/btn_editCancel"
+            android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			style="@style/edit_btn_style"
+			android:text="Cancel" />
+        
+        <View
+            android:layout_width="1dip" 
+		    android:layout_height="fill_parent"
+		    android:scaleY="0.8"
+		    android:background="#9C9C9C"
+		    android:layout_gravity="center_horizontal" />
+        
+        <Button
+            android:id="@+id/btn_editSave"
+            android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			style="@style/edit_btn_style"
+			android:text="Save" />
+        
+    </LinearLayout>
+
+</RelativeLayout>
